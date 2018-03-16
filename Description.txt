@@ -1,0 +1,50 @@
+/*************** Description **********************/
+
+Database
+
+1-user table (id ,username,password,email,photo);
+2-product table (id,name,description,photo,price,catagory_id);
+3-catagory table(id ,name);
+
+
+Classes of database in model directory
+
+1-User Class 
+variables of class [id ,username,password,email,photo,connection of database]
+constructor function take 2 arguments (connection of database, userId)
+save () function to insert new user into database return the userId [used when register a new user in database]
+updata () function to updata user's information such as (username,email,photo) [used when user edit his/her profile]
+
+
+2-Users Class
+variables of class [connection of database]
+constructor function take 1 argument(connection of database)
+getUsers() function to get all users saved in database return array of users object [used to check if user logged in with correct username and password]
+
+
+3-Product Class
+variables of class [id of product ,name of product,description of product,photo of product , price of product , the catagory id of product,the connection of database]
+constructor function take 2 arguments(connection of database ,Array of product with key and value)
+
+
+4-Products Class
+variables of class [connection of database]
+constructor function take 1 argument(connection of database)
+getProducts() function to get all products saved in database return array of products object [used to show all products in the home page ]
+
+
+5-Catagory Class 
+variables of class [id of catagory ,name of catagory]
+constructor function take 2 arguments(connection of database ,Array of catagory with key and value)
+getProducts($catagoryId,$conn) function take 2 arguments (connection of database ,the id of catagory) used to get all products that belongs to a certain catagory
+this function used when logged user select a certain catagory in the home page to see all products of this catagory
+
+
+6-Catagories Class
+variables of class [connection of database]
+constructor function take 1 argument(connection of database)
+getCatagories() function to get all Catagories saved in database return array of Catagories object [used to show all Catagories in the home page to enable for user to select a certain catagory ]
+
+
+
+ 
