@@ -1,1 +1,1 @@
-# php-ecommercy-project
+# php-ecommerce-project
